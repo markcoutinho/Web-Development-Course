@@ -1,0 +1,158 @@
+@font-face{
+    font-family: "valorant";
+    src:url("../fonts/ValorantFont.ttf")
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	height: 100vh;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	background-image: url("../Images/login.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+    width: 70%;
+    height: 80%;
+	margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+.login-part {
+	width: 40%;
+    height: 100%;
+}
+.right {
+	background-color: white;
+	align-items: center;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+
+.title {
+    font-family: "valorant";
+    font-size: 3.5rem;
+    padding-top: 50px;
+	text-align: center;
+	color: #101823;
+	display: block;
+	height: 60px;
+}
+
+.welcome {
+	color: #000000;
+    text-align: center;
+    font-size: 1.75rem;
+	margin-bottom: 50px;
+}
+.form-group{
+    background-color: #EDEDED;
+    margin: 10px;
+    width: 100%;
+    height: 50px;
+    
+}
+form {
+	width: 70%;
+	margin: 0 auto;
+	text-align: start;
+}
+
+input, label {
+	display: block;
+	width: 100%;
+}
+form input{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+form label{
+    position: absolute;
+}
+
+form input:focus+label{
+        color: green;
+}
+
+form a {
+	font-size: 10px;
+	display: block;
+	text-align: end;
+	text-decoration: none;
+	color: #101823;
+}
+form button {
+    display: block;
+    font-size: 18px;
+	margin: 20px auto;
+	border: none;
+	width: 150px;
+	height: 40px;
+	background-color: #101823;
+	color: white;
+	cursor: pointer;
+
+}
+
+form button:hover {
+	background-color: #FF4654;
+}
+
+form button:focus {
+	outline: none;
+}	
+
+.right h5 {
+    padding-top:15px ;
+}
+
+.right img {
+	width: 20px;
+	padding: 10px;
+	vertical-align: middle;
+}
+
+.alternate a {
+	display: block;
+	color: black;
+	text-decoration: none;
+	font-weight: 700;
+    font-size: 14px;
+    padding-bottom: 50px;
+}
+
+
+.create {
+	color: grey;
+    font-size: 12px;
+    
+}
+
+.create a {
+	font-size: 12px;
+    color: #101823;
+}
+
+#github {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	color: grey;
+}
