@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+html,body{
+background-image: url('https://images.hdqwalls.com/download/apex-legends-season-3-ws-1920x1080.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 570px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #93A945;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #93A945;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #93A945;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+i:hover{
+	color: #505453;
+}
+
+.card{
+	padding: 0px;
+	margin: 0px;
+}
+
+.con2{
+	width: 50%;
+  }
+  
+  .image {
+	display: block;
+	width: 567.66px;
+	height: 368px;
+  }
+  
+  .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #93A945;
+  }
+  .con2:hover .overlay {
+	opacity: 1;
+  }
+  
+  .text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+
+  h1{
+	  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  h3{
+	  padding-top: 40px;
+	  padding-bottom: 10px;
+	  color: white;
+	  border-bottom: 2px solid #93A945;
+	  text-align: center;
+	  display: block;
+   }
+
+   
+   ul li{
+		padding: 3px;
+		font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		color: #93A945;
+		text-decoration : none;
+		list-style-type : none;
+		font-size: 140%;
+		text-align: left;
+   }
+
+   ul>li{
+		padding-top: 20px;
+	}
+
+   a{
+	   color:#ffffff;
+   }
+
+   a:hover {
+	text-decoration: none;
+	color: #93A945;
+  }
+
+  h1{
+	  padding-top: 30px;
+	  padding-left: 20px;
+  }
+  .nav-link{
+	  padding-bottom: 15px;
+  }
+
+  .navbar-brand{
+	  padding-left: 10px;
+	  padding-right: 10px;
+  }
