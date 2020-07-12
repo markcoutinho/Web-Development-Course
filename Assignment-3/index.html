@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Assignment-3</title>
+  </head>
+  <body>
+    <div class="container mt-3"> 
+    <div class="row justify-content-center">
+        <div class="col">
+          <table class="table table-striped" style="background-color: grey;">
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>
+                  <h1 class="text-center" style="color: pink;">Slideshow</h1>
+                  <div class="input-group input-group-sm mb-3">
+                    <input id="userInputTime" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter time in milli seconds eg.2000">
+                    <button onclick="onUserInput()" class="btn mt-4 w-100" style="background-color: pink;">Submit</button>
+                  </div>
+                </td>
+                <td> 
+                  <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 10</div>
+                      <img src="media/img1.jpg" width="600" height="400">
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 10</div>
+                      <img src="media/img2.jpg" width="600" height="400" >
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 10</div>
+                      <img src="media/img3.jpg" width="600" height="400">
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">4 / 10</div>
+                      <img src="media/img4.jpg" width="600" height="400">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">5 / 10</div>
+                      <img src="media/img5.jpg" width="600" height="400">
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">6 / 10</div>
+                      <img src="media/img6.jpg" width="600" height="400">
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">7 / 10</div>
+                      <img src="media/img7.jpg" width="600" height="400">
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">8 / 10</div>
+                      <img src="media/img8.jpg" width="600" height="400">
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">9 / 10</div>
+                      <img src="media/img9.jpg" width="600" height="400">
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">10 / 10</div>
+                      <img src="media/img10.png" width="600" height="400">
+                    </div>
+                  </div>
+                  <div id="slideDots" style="text-align:center;display: none;">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                  </div>
+                  <script>                   
+                    let time = 0;
+                    let slideIndex = 0;
+
+                    function onUserInput() {
+                      const element = document.getElementById('slideDots');
+                      element.classList.add('slideshow');
+                      inputVal = document.getElementById('userInputTime').value                      
+                      time = inputVal
+                      showSlides();
+                    }
+                    function showSlides() {
+                      console.log(time)
+                      let i = 0;
+                      let slides = document.getElementsByClassName("mySlides");                      
+                      let dots = document.getElementsByClassName("dot");
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      slideIndex++;
+                      if (slideIndex > slides.length) {
+                        slideIndex = 1;
+                      }    
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                      setTimeout(showSlides, time); 
+                    }
+                    </script>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>
+                  <h1 class="text-center" style="color: pink;">Calculator</h1>
+                    <div class="input-group input-group-sm mb-3 text-center">
+                      <input id="operand1" type="text" class="form-control w-100 mb-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Operand 1">
+                      <input id="operand2" type="text" class="form-control w-100 mb-2" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Operand 2">
+                        <button onclick="calculator('add')" class="btn m-3" style="background-color: pink;">+</button>
+                        <button onclick="calculator('subtract')" class="btn m-3" style="background-color: pink;">-</button>
+                        <button onclick="calculator('multiply')" class="btn m-3" style="background-color: pink;">*</button>
+                        <button onclick="calculator('divide')" class="btn m-3" style="background-color: pink;">/</button>
+                    </div>
+                </td>
+                <td>
+                  <input class="form-control mt-5" type="text" placeholder="Result" id="result" readonly>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>
+                  <h1 class="text-center" style="color: pink;">Email-id validation</h1>
+                    <div class="form-group">
+                      <input type="email" oninput="validateEmail()" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email address">
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
